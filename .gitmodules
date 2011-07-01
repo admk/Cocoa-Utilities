@@ -1,0 +1,21 @@
+[submodule "MAFuture"]
+	path = MAFuture
+	url = https://github.com/mikeash/MAFuture.git
+[submodule "UliKit"]
+	path = UliKit
+	url = https://github.com/uliwitness/UliKit.git
+[submodule "NPReceiptVerification"]
+	path = NPReceiptVerification
+	url = https://github.com/nickpaulson/NPReceiptVerification.git
+[submodule "core-plot"]
+	path = core-plot
+	url = https://github.com/djw/core-plot.git
+[submodule "LaunchAtLoginController"]
+	path = LaunchAtLoginController
+	url = https://github.com/Mozketo/LaunchAtLoginController.git
+[submodule "MAObjCRuntime"]
+	path = MAObjCRuntime
+	url = https://github.com/mikeash/MAObjCRuntime.git
+[submodule "MACollectionUtilities"]
+	path = MACollectionUtilities
+	url = https://github.com/mikeash/MACollectionUtilities.git
