@@ -19,3 +19,6 @@
 [submodule "MACollectionUtilities"]
 	path = MACollectionUtilities
 	url = https://github.com/mikeash/MACollectionUtilities.git
+[submodule "NoodleKit"]
+	path = NoodleKit
+	url = https://github.com/MrNoodle/NoodleKit.git
