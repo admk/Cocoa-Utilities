@@ -65,3 +65,5 @@
 #define BOOLDefaults(key)	[[NSUserDefaults standardUserDefaults] boolForKey:__objc_str__(key)]
 #define SetDefaults(value, key) \
 							[[NSUserDefaults standardUserDefaults] setObject:(value) forKey:__objc_str__(key)]
+#define SetBOOLDefaults(value, key) \
+							[[NSUserDefaults standardUserDefaults] setBool:(value) forKey:__objc_str__(key)]
