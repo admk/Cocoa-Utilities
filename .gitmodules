@@ -24,4 +24,4 @@
 	url = https://github.com/MrNoodle/NoodleKit.git
 [submodule "Quincy Kit"]
 	path = Quincy Kit
-	url = https://github.com/TheRealKerni/QuincyKit.git
+	url = https://github.com/admk/QuincyKit.git
