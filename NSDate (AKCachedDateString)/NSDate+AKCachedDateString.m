@@ -23,13 +23,14 @@
 
 @implementation _AKDateStringMapCache
 
-static _AKDateStringMapCache *_sharedCache = nil;
 + (_AKDateStringMapCache *)sharedCache
 {
-    if (_sharedCache) return _sharedCache;
-
-    _sharedCache = [[_AKDateStringMapCache alloc] init];
-    return _sharedCache;
+	static dispatch_once_t pred;
+	static _AKDateStringMapCache *_sharedCache = nil;
+	dispatch_once(&pred, ^{
+		_sharedCache = [[_AKDateStringMapCache alloc] init];
+	});
+	return _sharedCache;
 }
 
 - (id)init
@@ -50,18 +51,26 @@ static _AKDateStringMapCache *_sharedCache = nil;
 
 - (NSDate *)dateWithString:(NSString *)string
 {
-    NSDate *date = [_map objectForKey:string];
-    if (!date)
-    {
-        date = [NSDate dateWithString:string];
-        [_map setObject:date forKey:string];
-    }
-    return date;
+	NSDate *date = nil;
+	@synchronized(self)
+	{
+		date = [_map objectForKey:string];
+		if (!date)
+		{
+			date = [NSDate dateWithString:string];
+			[_map setObject:date forKey:string];
+		}
+		[date retain];
+	}
+	return [date autorelease];
 }
 
 - (void)removeCachedDateString:(NSString *)string
 {
-    [_map removeObjectForKey:string];
+	@synchronized(self)
+	{
+		[_map removeObjectForKey:string];
+	}
 }
 
 @end
