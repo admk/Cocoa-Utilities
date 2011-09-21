@@ -2,7 +2,7 @@
 //	AKDebugMacros.h
 //	Debug Macros
 //
-//	Created by Adam Ko on 6/12/2010.
+//	Created by Xitong Gao on 6/12/2010.
 //	Copyright 2010 Loca Apps. All rights reserved.
 //
 //	INSTRUCTIONS
