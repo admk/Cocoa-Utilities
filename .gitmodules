@@ -25,3 +25,6 @@
 [submodule "Quincy Kit"]
 	path = Quincy Kit
 	url = https://github.com/admk/QuincyKit.git
+[submodule "FormatterKit"]
+	path = FormatterKit
+	url = https://github.com/mattt/FormatterKit.git
